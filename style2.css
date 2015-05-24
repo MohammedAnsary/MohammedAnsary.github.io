@@ -160,24 +160,38 @@ html, body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.project {
+	font-size: 0pt;
+	margin-top: 10px;
+}
 .project > h1 {
 	font-family: Open Sans;
 	font-size: 30pt;
 	color: white;
+	position: relative;
 }
-.project > div {
-	width: 49%;
+.project > .content-wrapper {
+	height: 200px;
+}
+.project > .content-wrapper > .lef {
+	width: 50%;
 	display: inline-block;
 	font-family: Open Sans;
 	color: white;
-	font-size: 0px;
+	font-size: 18px;
 }
-.project > div > div {
-	position: absolute;
-	width: 45%;
-	font-size: 18pt;
+.project > .content-wrapper > .ri {
+	width: 50%;
+	display: inline-block;
+	float: right;
+
 }
-.project > div > div > img {
-	width: 600px;
-	float: left;
+.project > .content-wrapper > .lef > div {
+	width: 90%;
+	text-align: left;
+	margin: 0;
+}
+.project > .content-wrapper > .ri > img {
+	height: 250px;
+	float: right;
 }
