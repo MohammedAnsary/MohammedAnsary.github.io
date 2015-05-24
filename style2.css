@@ -192,6 +192,6 @@ html, body {
 	margin: 0;
 }
 .project > .content-wrapper > .ri > img {
-	height: 250px;
+	width: 100%;
 	float: right;
 }
