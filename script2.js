@@ -13,6 +13,7 @@ function again() {
 }
 function letsrocknroll() {
 	var navbar = $('#navbar');
+	var projects = $('#projects');
 	$(".outer .middle .inner").html("");
 	$(".outer").animate({height: '10%', backgroundColor: '#2F2F2F', position: 'fixed', top: '0px'}, 500);
 	$(".right").animate({height: '90%', bottom: '0px'}, 500);
@@ -36,4 +37,13 @@ function letsrocknroll() {
 			// delay += 300;
 		// });
 	}, 1002);
+	setTimeout(function(){  
+		projects.detach();
+		$(".right").append(projects);
+		projects.css("display", "block");
+		//$('.navbar-name').animate({opacity: '1'}, 300);
+		setTimeout(function(){ $('.section-header').animate({opacity: '1'}, 300); }, 0);
+		setTimeout(function(){ $('.right-scroller').animate({opacity: '1'}, 300); }, 600);
+		setTimeout(function(){ $('.section-footer').animate({opacity: '1'}, 300); }, 1200);
+	}, 2500);
 }
