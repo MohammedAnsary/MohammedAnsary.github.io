@@ -145,7 +145,8 @@ html, body {
 	color: #cf4b33;
 	border-bottom: 2px solid #cf4b33;
 }
-.dropdown-wrapper > .dropdown-menu > li input[type=text].active::-webkit-input-placeholder { 
+.dropdown-wrapper > .dropdown-menu > li input[type=text].active::-webkit-input-placeholder
+{ 
     color: #cf4b33;
 }
 .dropdown-wrapper > .dropdown-menu > li input[type=text].active::-moz-placeholder { 
@@ -159,4 +160,40 @@ html, body {
 }
 .sub-menu {
 	left: 310px !important;
+}
+.grid-menu {
+	width: 400px !important;
+	font-size: 0pt !important;
+}
+.grid-menu > li {
+	display: inline-block;
+	width: calc(50% - 1px);
+	overflow-x: hidden;
+	height: auto;
+	border-bottom: 2px solid #cccccc;
+}
+.grid-menu > li:nth-child(odd) {
+	border-right: 1px solid #cccccc;
+}
+.grid-menu > li:nth-child(even) {
+	border-left: 1px solid #cccccc;
+}
+.grid-menu > li > .grid-menu-item {
+	display: block;
+	width: 200%;
+}
+.grid-menu > li > .grid-menu-item > .half-item {
+	display: inline-block;
+	width: calc(50% - 20px);
+	padding: 15px 20px 15px 20px;
+}
+.grid-menu > li > .grid-menu-item > .half-item > img {
+	width: 160px;
+	height: 150px;
+	margin-bottom: 10px;
+}
+.grid-menu > li > .grid-menu-item > .half-item > .item-title {
+	font-size: 12pt;
+	color: #454545;
+	font-weight: 700;
 }
