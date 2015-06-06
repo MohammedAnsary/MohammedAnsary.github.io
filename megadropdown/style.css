@@ -72,7 +72,8 @@ html, body {
 	margin: 0;
 	background-color: white;
 	width: 280px;
-	font-size: 12pt;
+	font-size: 14pt;
+	font-weight: 500;
 	transition: 0.3s all ease; 
 }
 .dropdown-wrapper > .is-active {
@@ -87,12 +88,16 @@ html, body {
 	text-decoration: none;
 	color: #454545;
 }
+.dropdown-wrapper > .dropdown-main > li:not(:last-child) > a {
+	border-bottom: 2px solid #cccccc;
+}
 .dropdown-wrapper > .dropdown-main > li > a.active {
 	display: block;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	padding: 15px 20px 15px 20px;
 	text-decoration: none;
 	color: #ba432e;
-}
-.dropdown-wrapper > .dropdown-main > li:not(:last-child) {
-	border-bottom: 1px solid #cccccc;
+	border-bottom: 2px solid #ba432e;
 }
