@@ -181,11 +181,13 @@ html, body {
 .grid-menu > li > .grid-menu-item {
 	display: block;
 	width: 200%;
+	transition: 0.3s all ease;
 }
 .grid-menu > li > .grid-menu-item > .half-item {
 	display: inline-block;
-	width: calc(50% - 20px);
+	width: calc(50% - 40px);
 	padding: 15px 20px 15px 20px;
+	vertical-align: top;
 }
 .grid-menu > li > .grid-menu-item > .half-item > img {
 	width: 160px;
@@ -196,4 +198,14 @@ html, body {
 	font-size: 12pt;
 	color: #454545;
 	font-weight: 700;
+}
+.grid-menu > li > .grid-menu-item > .half-item > ul{
+	font-size: 10pt;
+	top: 0px;
+	list-style-type: none;
+	text-decoration: none;
+	padding: 0;
+}
+.active-item {
+	transform: translateX(-200px);
 }

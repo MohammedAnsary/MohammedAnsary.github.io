@@ -28,6 +28,11 @@ $( document ).ready(function() {
 	$('.dropdown-wrapper > .dropdown-menu > li input[type=text]').focusout(function() {
 		$(this).removeClass('active');
 	});
+	$('.grid-menu-item').hover(function() {
+		$(this).addClass('active-item');
+		}, function() {
+		$(this).removeClass('active-item');
+	});
 });
 
 
