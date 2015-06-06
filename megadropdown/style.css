@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+html, body {
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+	background-color: #cccccc;
+}
+.navbar {
+	position: relative;
+	background-color: #474441;
+    height: 70px;
+    width: 100%;
+	z-index: 1;
+}
+.navbar > .dropdown-wrapper {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: auto;
+}
+.navbar > .dropdown-wrapper > a {
+	border-right: solid 1px black;
+	font-family: Open Sans;
+	text-decoration: none;
+	position: absolute;
+	height: 100%;
+	color: white;
+	font-size: 25pt;
+	padding: 0 32.5px 0 32.5px;
+	width: auto;
+}
+.navbar > .dropdown-wrapper > a > span.bars {
+	position: absolute;
+	background-color: white;
+	right: 20px;
+	width: 25px;
+	height: 3px;
+	transform: translateY(35px);
+}
+.navbar > .dropdown-wrapper > a > span.bars::before, 
+.navbar > .dropdown-wrapper > a > span.bars::after {
+	content: "";
+	position: absolute;
+	background-color: white;
+	width: 25px;
+	height: 3px;
+	transition: 0.3s all ease; 
+}
+.navbar > .dropdown-wrapper > a > span.bars::before {
+	transform: translateY(-10px);
+}
+.navbar > .dropdown-wrapper > a > span.bars::after {
+	transform: translateY(10px);
+}
+.navbar > .dropdown-wrapper > a.active > span.bars::before {
+	transform: translateY(-15px);
+}
+.navbar > .dropdown-wrapper > a.active > span.bars::after {
+	transform: translateY(15px);
+}
+.dropdown-wrapper > .dropdown-main {
+	font-family: Open Sans;
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	visibility: hidden;
+	opacity: 0;
+	list-style-type: none;
+	padding: 0;	
+	margin: 0;
+	background-color: white;
+	width: 280px;
+	font-size: 12pt;
+	transition: 0.3s all ease; 
+}
+.dropdown-wrapper > .is-active {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(-30px) translateX(-30px);
+	z-index: 2;
+}
+.dropdown-wrapper > .dropdown-main > li > a {
+	display: block;
+	padding: 15px 20px 15px 20px;
+	text-decoration: none;
+	color: #454545;
+}
+.dropdown-wrapper > .dropdown-main > li > a.active {
+	display: block;
+	padding: 15px 20px 15px 20px;
+	text-decoration: none;
+	color: #ba432e;
+}
+.dropdown-wrapper > .dropdown-main > li:not(:last-child) {
+	border-bottom: 1px solid #cccccc;
+}
