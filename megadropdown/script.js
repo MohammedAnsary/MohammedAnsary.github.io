@@ -13,10 +13,12 @@ $( document ).ready(function() {
 		$(target).addClass('is-active');
 		}, function() {
 		var target = "#" + $(this).attr('data-target');
-		if(!$( target ).is(':hover'))
+		if(!($( target + ':hover').length == 1)) {
 			$(target).removeClass('is-active');
+		}
 	});
 	$('.sub-menu').hover(function() {
+		$(this).addClass('is-active');
 		}, function() {
 		$(this).removeClass('is-active');
 	});
