@@ -3,9 +3,15 @@ $( document ).ready(function() {
 		$( '#dropbtn').toggleClass('active');
 		$( '#dropmenu').toggleClass('is-active');
 	});
-	$('.dropdown-wrapper > .dropdown-main > li > a').hover(function(){
+	$('.dropdown-wrapper > .dropdown-main > li > a').hover(function() {
 		$(this).addClass('active');
-		}, function(){
+		}, function() {
+		$(this).removeClass('active');
+	});
+	$('input[type=text]').focusin(function() {
+		$(this).addClass('active');
+	});
+	$('input[type=text]').focusout(function() {
 		$(this).removeClass('active');
 	});
 });
