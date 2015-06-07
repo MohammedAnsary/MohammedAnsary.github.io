@@ -145,8 +145,7 @@ html, body {
 	color: #cf4b33;
 	border-bottom: 2px solid #cf4b33;
 }
-.dropdown-wrapper > .dropdown-menu > li input[type=text].active::-webkit-input-placeholder
-{ 
+.dropdown-wrapper > .dropdown-menu > li input[type=text].active::-webkit-input-placeholder { 
     color: #cf4b33;
 }
 .dropdown-wrapper > .dropdown-menu > li input[type=text].active::-moz-placeholder { 
@@ -219,4 +218,20 @@ html, body {
 }
 .active-item {
 	transform: translateX(-200px);
+}
+.credits {
+	font-family: Open Sans;
+	color: #454545;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 18pt;
+}
+.credits a,
+.credits a:hover,
+.credits a:visited,
+.credits a:active { 
+	text-decoration: none;
+	color: #cf4b33;
 }
