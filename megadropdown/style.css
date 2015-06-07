@@ -178,6 +178,10 @@ html, body {
 .grid-menu > li:nth-child(even) {
 	border-left: 1px solid #cccccc;
 }
+.grid-menu > li:last-child,
+.grid-menu > li:nth-last-child(2){
+	border-bottom: 1px solid white;
+}
 .grid-menu > li > .grid-menu-item {
 	display: block;
 	width: 200%;
@@ -199,12 +203,19 @@ html, body {
 	color: #454545;
 	font-weight: 700;
 }
-.grid-menu > li > .grid-menu-item > .half-item > ul{
-	font-size: 10pt;
-	top: 0px;
+.grid-menu > li > .grid-menu-item > .half-item > ul {
+	font-size: 12pt;
 	list-style-type: none;
-	text-decoration: none;
 	padding: 0;
+}
+.grid-menu > li > .grid-menu-item > .half-item > ul > li > a,
+.grid-menu > li > .grid-menu-item > .half-item > ul > li > a:active,
+.grid-menu > li > .grid-menu-item > .half-item > ul > li > a:visited {
+	color: #454545;
+	text-decoration: none;
+}
+.grid-menu > li > .grid-menu-item > .half-item > ul > li > a:hover {
+	color: #cf4b33;
 }
 .active-item {
 	transform: translateX(-200px);
