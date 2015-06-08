@@ -235,3 +235,22 @@ html, body {
 	text-decoration: none;
 	color: #cf4b33;
 }
+@media all and (max-width: 768px) {
+	.navbar > .dropdown-wrapper {
+		width: 100%;
+	}
+	.dropdown-wrapper > .dropdown-menu {
+		top: 70px;
+		left: -100%;
+		width: 100%;
+	}
+	.dropdown-wrapper > .is-active {
+		transform: translateX(100%);
+	}
+	.dropdown-wrapper > .sub-menu {
+		left: -100% !important;
+	}
+	.dropdown-wrapper > .grid-menu {
+		width: 100% !important;
+	}
+}
