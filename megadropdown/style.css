@@ -235,7 +235,7 @@ html, body {
 	text-decoration: none;
 	color: #cf4b33;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
 	.navbar > .dropdown-wrapper {
 		width: 100%;
 	}
