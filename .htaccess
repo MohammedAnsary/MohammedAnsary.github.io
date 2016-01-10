@@ -8,4 +8,11 @@ ExpiresByType image/x-icon "access plus 1 years"
 ExpiresByType text/css "access plus 1 weeks"
 ExpiresByType text/javascript "access plus 1 weeks"
 ExpiresByType application/x-javascript "access plus 1 weeks"
+<IfModule mod_headers.c>
+       Header unset ETag
+       Header unset Pragma
+       Header unset Last-Modified
+       Header append Cache-Control "public, no-transform, must-revalidate"
+       Header set Last-modified "Tue, 1 Oct 2014 10:10:10 GMT"
+  </IfModule>
 </IfModule>
