@@ -251,7 +251,7 @@ html, body {
 	overflow: hidden;
 	width: 550px;
 	height: 380px;
-	left: calc(50% - 225px);
+	left: calc(50% - 275px);
 	top: calc(50% - 190px);
 	background-color: white;
 }
@@ -324,5 +324,5 @@ html, body {
 	font-weight: 700;
 	color: white;
 	text-align: left;
-	
+
 }
