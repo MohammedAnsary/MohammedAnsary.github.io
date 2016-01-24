@@ -49,20 +49,36 @@ function letsrocknroll() {
 		content.addClass('shown');
 		$(".right-scroller div").append(selector);
 		selector.addClass('shown');
-		$('.navbar-name').animate({opacity: '1'}, 300);
-		setTimeout(function(){ $('.section-header').animate({opacity: '1'}, 300); }, 0);
-		setTimeout(function(){ $('.right-scroller').animate({opacity: '1'}, 300); }, 0);
-		setTimeout(function(){ $('.section-footer').animate({opacity: '1'}, 300); }, 600);
+		$('.navbar-name').animate({opacity: '1'}, 500);
+		setTimeout(function(){ $('.right-scroller').animate({opacity: '1'}, 500); }, 0);
+		setTimeout(function(){ $('.section-footer').animate({opacity: '1'}, 500); }, 600);
 	}, 2500);
 }
-function hideSelector() {
-	selector.animate({opacity: '0'}, 300, function(){ selector.detach() });
+function hideSelector(callback) {
+	selector.animate({opacity: '0'}, 500, function(){ selector.detach(); callback();});
 }
 $( document ).ready(function(){
 	$('.selection-projects').click(function(){
-		hideSelector();
+		hideSelector(function() {
+			$(".right-scroller div").append(projects);
+			projects.addClass('shown');
+			projects.animate({opacity: '1'}, 500);
+			$(".section-header").html('<span class="fa fa-code"></span> Projects <a class="back"><span class="fa fa-close"></span></a>');
+			$(".section-header").animate({opacity: '1'}, 500);
+		});
 	});
 	$('.selection-pens').click(function(){
 		hideSelector();
+	});
+	$(document).on('click', '.back',function(){
+		console.log('');
+		$(".section-header").animate({opacity: '0'}, 500, function() {
+			$(".section-header").html('');
+		});
+		projects.animate({opacity: '0'}, 500, function(){
+			projects.detach();
+			$(".right-scroller div").append(selector);
+			selector.animate({opacity: '1'}, 500);
+		});
 	});
 });

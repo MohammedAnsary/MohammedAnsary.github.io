@@ -139,8 +139,18 @@ html, body {
 }
 .section-header {
 	font-size: 22pt;
-	padding-top: 15px;
+	padding: 9px;
+	box-sizing: border-box;
 	top: 0px;
+	opacity: 0;
+}
+.section-header a,
+.section-header a:hover,
+.section-header a:active,
+.section-header a:visited{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }
 .section-footer {
 	bottom: 0px;
@@ -224,12 +234,14 @@ html, body {
 }
 #projects {
 	display: none;
+	opacity: 0;
 }
 #selector {
 	display: none;
 }
 #pens {
 	display: none;
+	opacity: 0;
 }
 .shown {
 	display: block !important;
