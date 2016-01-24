@@ -72,7 +72,7 @@ $( document ).ready(function(){
 			$(".right-scroller div").append(pens);
 			pens.addClass('shown');
 			pens.animate({opacity: '1'}, 500);
-			$(".section-header").html('<span class="fa fa-codepen"></span> Plyground <a class="back"><span class="fa fa-close"></span></a>');
+			$(".section-header").html('<span class="fa fa-codepen"></span> Playground <a class="back"><span class="fa fa-close"></span></a>');
 			$(".section-header").animate({opacity: '1'}, 500);
 		});
 	});
