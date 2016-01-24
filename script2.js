@@ -68,17 +68,32 @@ $( document ).ready(function(){
 		});
 	});
 	$('.selection-pens').click(function(){
-		hideSelector();
+		hideSelector(function(){
+			$(".right-scroller div").append(pens);
+			pens.addClass('shown');
+			pens.animate({opacity: '1'}, 500);
+			$(".section-header").html('<span class="fa fa-codepen"></span> Plyground <a class="back"><span class="fa fa-close"></span></a>');
+			$(".section-header").animate({opacity: '1'}, 500);
+		});
 	});
 	$(document).on('click', '.back',function(){
 		console.log('');
 		$(".section-header").animate({opacity: '0'}, 500, function() {
 			$(".section-header").html('');
 		});
-		projects.animate({opacity: '0'}, 500, function(){
-			projects.detach();
-			$(".right-scroller div").append(selector);
-			selector.animate({opacity: '1'}, 500);
-		});
+		if(projects.parent().length > 0) {
+			projects.animate({opacity: '0'}, 500, function(){
+				projects.detach();
+				$(".right-scroller div").append(selector);
+				selector.animate({opacity: '1'}, 500);
+			});
+		}
+		if(pens.parent().length > 0) {
+			pens.animate({opacity: '0'}, 500, function(){
+				pens.detach();
+				$(".right-scroller div").append(selector);
+				selector.animate({opacity: '1'}, 500);
+			});
+		}
 	});
 });

@@ -314,3 +314,15 @@ html, body {
 .selection-pens:hover h2 {
 	opacity: 1;
 }
+.pen {
+	width: 60%;
+	margin: auto;
+	margin-top: 20px;
+}
+.pen h3{
+	font-family: Open Sans;
+	font-weight: 700;
+	color: white;
+	text-align: left;
+	
+}
