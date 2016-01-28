@@ -77,7 +77,6 @@ $( document ).ready(function(){
 		});
 	});
 	$(document).on('click', '.back',function(){
-		console.log('');
 		$(".section-header").animate({opacity: '0'}, 500, function() {
 			$(".section-header").html('');
 		});
