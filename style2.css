@@ -142,6 +142,7 @@ html, body {
 	padding: 9px;
 	box-sizing: border-box;
 	top: 0px;
+	margin-top: 3px;
 	opacity: 0;
 }
 .section-header a,
