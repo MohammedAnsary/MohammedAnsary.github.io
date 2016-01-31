@@ -159,6 +159,13 @@ html, body {
 .section-footer > p {
 	margin-top: 20px;
 }
+.section-footer > p > span {
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+}
 .right-scroller {
 	position: absolute;
     top: 60px;
