@@ -9,7 +9,7 @@ music.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/tracks/2ye2Wgw4gimLv2eAKyk1NB");
   $locationProvider.html5Mode(true);
-  
+
   $stateProvider
     .state('tracks', {
       url: "/tracks/:id",
@@ -47,7 +47,7 @@ music.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       $scope.$parent.artists[i].active = false;
     }
   }
-  $http.get("http://localhost/spotify/token-request.php").then(function(response) {
+  $http.get("https://ansary.xyz/spotify-access-token-generator/token-request.php").then(function(response) {
     var token = response.data.access_token;
     $http({
       method: 'GET',
@@ -83,7 +83,7 @@ music.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
    });
   });
 }).controller('album',function($scope, $stateParams, $http) {
-  $http.get("http://localhost/spotify/token-request.php").then(function(response) {
+  $http.get("https://ansary.xyz/spotify-access-token-generator/token-request.php").then(function(response) {
     var token = response.data.access_token;
     $http({
       method: 'GET',
