@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="music" class="no-js" ng-controller='artists'>
+<head>
+  <base href="/AnsaryAngularTrial/app/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Let's Rock!</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <div class="top-bar row">
+      <div class="col-lg-4">
+        <div class="logo">
+          <h1>Let<span class="fa fa-bolt"></span>s</h1>
+          <h1>R<span><img src="assets/images/cd.png" alt="o"></span>ck</h1>
+        </div>
+      </div>
+      <div class="col-lg-8" >
+        <div class="artists">
+          <ul>
+            <li ng-repeat="artist in artists">
+              <a ui-sref="tracks({id: artist.id})" class="{{ artist.active ? 'active':'' }}">{{ artist.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div ui-view></div>
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

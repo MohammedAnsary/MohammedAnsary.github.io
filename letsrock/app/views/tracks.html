@@ -1,0 +1,38 @@
+<div class="tracks row" ng-controller='tracks'>
+	<div class="col-lg-4">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="featured">
+					<h2>{{ currentName }}</h2>
+					<h3>{{ Math.floor(audio.currentTime/60) + ":" +  Math.floor(audio.currentTime % 60) }}</h3>
+					<a ui-sref="albumDetails({id: currentAlbumID})">{{ currentAlbum }}</a>
+					<img src="{{ currentImg }}" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="player">
+					<div class="audio-progress">
+						<input type="range" min="0" max="1" step="0.01" ng-model="audio.progress">
+						<div class="audio-progress-so-far" style="width: {{(audio.progress * 100)  + '%'}};"></div>
+					</div>
+					<div class="audio-controls">
+						<button ng-click='audio.restart()' class="fa fa-stop"></button>
+						<button ng-click='audio.paused ? audio.play() : audio.pause()' class="fa fa-{{ audio.paused ? 'play' : 'pause'}}"></button>
+						<button ng-click='audio.muting = !audio.muting' class="fa fa-{{ audio.muting ? 'volume-off' : 'volume-up'}}"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="tracks">
+			<ul>
+				<li ng-repeat= "track in tracks">
+					<a ng-click="playTrack(track)" class="{{ (track.id == currentID)? (audio.paused)? 'active': 'active playing' : '' }}">{{ track.name }}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

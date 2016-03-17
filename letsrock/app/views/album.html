@@ -1,0 +1,21 @@
+<div class="tracks row" ng-controller='album'>
+	<div class="col-lg-4">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="featured">
+					<h2 class="album-title">{{ albumName }}</h2>
+					<img src="{{ albumImg }}" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="tracks">
+			<ul>
+				<li ng-repeat= "track in tracks">
+					<a>{{ track.name }}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
