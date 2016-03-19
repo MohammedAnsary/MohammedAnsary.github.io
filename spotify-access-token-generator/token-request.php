@@ -15,6 +15,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $server_output = curl_exec ($ch);
 curl_close ($ch);
 header('Content-Type: application/json');
-//header('Access-Control-Allow-Origin: '.gethostname());
+header('Access-Control-Allow-Origin: '.gethostname());
 echo $server_output;
 ?>
