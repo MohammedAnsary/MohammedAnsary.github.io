@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Usable UIs for Semantic Text Composition</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style type="text/css">
+			h1, h2, h3, h4 {
+				text-transform: none !important;
+			}
+			.highlight {
+				background-color: yellow;
+				color: black;
+				position: absolute;
+				left: 135.6px;
+			}
+			.connector {
+				position: absolute;
+				height: 70px;
+				width: 5px;
+				background-color: white;
+			}
+			.data {
+				position: absolute;
+				top: 160px;
+				display: inline-block;
+			}
+			.kaiser {
+				width: 7%;
+				left: 110px;
+			    border: none !important;
+			    background: rgba(0, 0, 0, 0) !important;
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Usable UIs for Semantic Text Composition</h2>
+				</section>
+				<section>
+					<section>
+						<h1 style="font-size: 4em;">Seed</h1>
+					</section>
+					<section>
+						<h3>Kaiserslautern<span class="fragment highlight" data-fragment-index="1">Kaiserslautern</span> is a beautiful city.</h3>
+						<div class="fragment connector" data-fragment-index="2" style="transform: translate(175px, -13px) rotateZ(30deg);"></div>
+						<img class="data kaiser fragment" data-fragment-index="2"  style="width: 50px;" src="img/kaiser.png">
+						<div class="fragment connector" data-fragment-index="3" style="transform: translate(281px, -8px) rotateZ(0deg);"></div>
+						<span class="data fragment" data-fragment-index="3"  style="left: 250px; top: 170px;">City</span>
+						<div class="fragment connector" data-fragment-index="4" style="transform: translate(387px, -13px) rotateZ(-30deg);"></div>
+						<span class="data fragment" data-fragment-index="4"  style="left: 410px; text-align: left">
+							Kaiserslautern is a city in southwest Germany, located in the Bundesland (State) of Rhineland-Palatinate ...
+						</span>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
