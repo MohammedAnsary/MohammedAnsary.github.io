@@ -1,0 +1,15 @@
+<table>
+    <tbody>
+        {{#row}}
+            <tr>
+                {{#col}}
+                <td id="{{concat this.position.row this.position.col}}" class="{{#if this.isUp}}top {{/if}}{{#if this.isRight}} right{{/if}}{{#if this.isDown}} bottom{{/if}}{{#if this.isLeft}} left{{/if}} {{#if this.isStart}} start{{/if}} {{#if this.isEnd}} end{{/if}}">
+                    {{#if this.isPokemons}}
+                        <img src="app/assets/img/{{this.pokemonNumber}}.png" />
+                    {{/if}}
+                </td>
+                {{/col}}
+            </tr>
+        {{/row}}
+    </tbody>
+</table>
