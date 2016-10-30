@@ -315,8 +315,8 @@
 	            resultNodes.push(result);
 	            result = result.parent;
 	        }
-	        var playerOffsetTop = 115;
-	        var playerOffsetLeft = 30;
+	        var playerOffsetTop = $('#0_0').offset().top + 27;
+	        var playerOffsetLeft = $('#0_0').offset().left + 21;
 	        var step = 75;
 	        var moveCharacter = function () {
 	            var node = resultNodes.pop();
